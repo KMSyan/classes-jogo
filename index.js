@@ -6,12 +6,10 @@ class hero {
   }
 
   atacar() {
-    console.log(`O ${this.tipo} atacou usando ${tipoAtaque(this.tipo)}`)
+    console.log(`O ${this.tipo} atacou usando ${this.tipoAtaque(this.tipo)}`)
   }
-  
-
-}
-  function tipoAtaque(tipo) {
+    
+  tipoAtaque(tipo) {
     let ataque = '';
     if(tipo.toLowerCase() === "mago"){
       return ataque = "magia";
@@ -23,6 +21,7 @@ class hero {
       return ataque = "shuriken";
     }
   }
+}
 
 let ninja = new hero("Naruto", 13, "Ninja");
 ninja.atacar()
